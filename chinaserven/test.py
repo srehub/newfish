@@ -9,5 +9,3 @@ def func(n):
         return n * func(n - 1)
 
 print "Now, the total is: ", (func(5))
-
-print 123
