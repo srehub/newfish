@@ -14,7 +14,7 @@
 
    cd newfish && mkdir DeanChina/2017week32
 
-   说明：DeanChina为github账号, 可以使用github.com/DeanChina可以访问个人主页; week32是通过date "+%V" 计算出来的
+   说明：DeanChina为github账号, 可以使用github.com/DeanChina可以访问个人主页; week32是通过date "+%V" 计算的
 
 
 4. 提交代码
