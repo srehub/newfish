@@ -2,12 +2,13 @@
 
 1. git 全局配置
 
-git config --global user.email "sre@srehub.com"
+   git config --global user.email "sre@srehub.com"
 
-git config --global user.name "sre"
+   git config --global user.name "sre"
 
 2. git 下载代码
-git clone git clone https://github.com/srehub/newfish
+
+   git clone git clone https://github.com/srehub/newfish
 
 3. 代码目录
 
