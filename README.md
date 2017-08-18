@@ -22,3 +22,9 @@
    git commit -m"demo mark"  -a
 
    git push
+
+## 进度
+- [x] 基础环境搭建
+- [x] 每日一练
+- [ ] github协作
+- [ ] 小项目
