@@ -21,7 +21,7 @@ for i in range(1,9):
         print( (list) , ", That's right, I have ", len(list), "balls, great !" )
     else:
         list.append(i)
-        print((list), "There are ", len(list) , "balls, it's too many balls, i will drop", i)
+        print((list), "There are ", len(list) , "balls, it's too many, i will drop", i)
         list.pop()
         print("Still ,i have " ,(list))
 
