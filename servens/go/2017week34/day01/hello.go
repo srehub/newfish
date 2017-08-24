@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 // 常量的定义
-const PI = 3.15
+const PI = 3.14
 
 // 全局变量的声明与赋值
 var name = "gopher"
