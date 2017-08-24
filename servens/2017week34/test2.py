@@ -12,7 +12,7 @@ for i in enumerate(li,1):
 '''
 '''
 s = 'i am {0}'
-print s.format('alex')
+print s.format('test')
 
 b = 'abc'
 print 'i love',format(b)
