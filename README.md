@@ -8,7 +8,7 @@
 
 2. git 下载代码
 
-   git clone git clone https://github.com/srehub/newfish
+   git clone https://github.com/srehub/newfish
 
 3. 代码目录
 
