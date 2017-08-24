@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 // 常量的定义
-const PI = 3.14
+const PI = 3.15
 
 // 全局变量的声明与赋值
 var name = "gopher"
@@ -22,4 +22,5 @@ type golang interface {}
 // 由main函数作为程序的入科点启动
 func main()  {
 	fmt.Printf("Hello world\n")
+	fmt.Printf("你好，世界！\n")
 }
