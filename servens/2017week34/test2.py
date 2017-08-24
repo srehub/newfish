@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #!coding:utf-8
 
+
 li = ['手表','汽车','房子']
 '''
 for i in li:
