@@ -1,0 +1,77 @@
+#__Author__: zhijian
+#Time: 2017/8/28 11:52
+
+'''1、顾客输入自己的存款
+2、判断顾客输入是否合法
+3、向顾客展示商品列表
+4、请顾客选择要购买的商品
+5、判断顾客选择的商品是不在列表中
+6、顾客选择商品后，后顾客展示本次购买的商品与顾客余额
+7、将顾客购买的商品存入购物车
+8、顾客退出后向顾客展示已买商品与顾客的余额'''
+
+#商品列表
+product_list = [
+    ('iphone6s',6800),
+    ('kindle',1200),
+    ('mac book',9000),
+    ('python book',90),
+    ('bike',1800)
+
+]
+#购物车，存放顾客已购买商品
+product_car = []
+
+#顾客存款，并判断输入是否合法
+saving = input('please input your saving:')
+if saving.isdigit():
+    saving = int(saving)
+#while True作用为无限循环向顾客推送商品，直到顾客退出
+    while True:
+#打印商品列表
+        # print('code','product','price')
+        for i,v in enumerate(product_list,1):
+
+            print(i,'.',v[0] , v[1])
+
+#提示顾客输入要购买的商品编号，并判断是否合法
+        choise = input('please chiose product you like[q for quit]>>>:')
+        if choise.isdigit():
+            choise = int(choise)
+
+#判断顾客选择的商品是否在商品列表中
+            if choise > 0 and choise <= len(product_list):
+                p_item = choise
+
+#判断顾客存款金额大于商品金额，并向顾客展示已购商品并显示余额，否则让顾客重新选择。
+                if saving > product_list[p_item - 1][1]:
+                    print('your choise:', product_list[p_item - 1][0])
+                    saving = saving - product_list[p_item - 1][1]
+                    print('You balance is %s :'% saving)
+                    print('--------------------')
+
+#将已购买商品存放购物车中
+                    u_product = product_list[p_item -1]
+                    product_car.append(u_product)
+
+                else:
+                    print("!!!Insufficient account balance,please select other itmes!")
+            else:
+                print("You choise product don't exist,please try again!")
+
+#顾客退出后后其打印已购买商品与余额
+        elif choise == "q":
+            print('------ You have to buy product: ------')
+
+            for u,p in enumerate(product_car,1):
+                print(u,'.',p[0])
+
+            print()
+            print('You balance is %s:'% saving)
+            break
+
+        else:
+            print('Invalid input')
+
+else:
+    print('Invalid input')
