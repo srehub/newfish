@@ -29,7 +29,7 @@ if saving.isdigit():
     while True:
 
         for i,v in enumerate(product_list,1):
-            print(i,'.',v)
+            print(i,'.',v[0],v[1])
 
         choise = input('please chiose product you like[q for quit]:')
         if choise.isdigit():
@@ -41,7 +41,7 @@ if saving.isdigit():
                 if saving > product_list[p_item - 1][1]:
                     print('your choise:', product_list[p_item - 1][0])
                     saving = saving - product_list[p_item - 1][1]
-                    print('You balance is :', saving)
+                    print('You balance is %s :'% saving)
                     print('--------------------')
 
                     u_product = product_list[p_item -1]
