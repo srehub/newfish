@@ -1,0 +1,65 @@
+#__Author__: zhijian
+#Time: 2017/8/28 11:52
+
+'''1、顾客输入自己的存款
+2、判断顾客输入是否合法
+3、向顾客展示商品列表
+4、请顾客选择要购买的商品
+5、判断顾客选择的商品是不在列表中
+6、顾客选择商品后，后顾客展示本次购买的商品与顾客余额
+7、将顾客购买的商品存入购物车
+8、顾客退出后向顾客展示已买商品与顾客的余额'''
+
+
+product_list = [
+    ('iphone6s',6800),
+    ('kindle',1200),
+    ('mac book',9000),
+    ('python book',90),
+    ('bike',1800)
+
+]
+
+product_car = []
+
+saving = input('please input your saving:')
+if saving.isdigit():
+    saving = int(saving)
+    
+    while True:
+
+        for i,v in enumerate(product_list,1):
+            print(i,'.',v)
+
+        choise = input('please chiose product you like[q for quit]:')
+        if choise.isdigit():
+            choise = int(choise)
+
+            if choise > 0 and choise <= len(product_list):
+                p_item = choise
+
+                if saving > product_list[p_item - 1][1]:
+                    print('your choise:', product_list[p_item - 1][0])
+                    saving = saving - product_list[p_item - 1][1]
+                    print('You balance is :', saving)
+                    print('--------------------')
+
+                    u_product = product_list[p_item -1]
+                    product_car.append(u_product)
+
+                else:
+                    print("!!!Insufficient account balance,please select other itmes!")
+            else:
+                print("You choise product don't exist,please try again!")
+
+        elif choise == "q":
+            print('------ You have to buy product: ------')
+            print(product_car)
+            print('You balance is :',saving)
+            break
+
+        else:
+            print('Invalid input')
+
+else:
+    print('Invalid input')
