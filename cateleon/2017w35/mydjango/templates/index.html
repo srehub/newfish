@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="..."> PLEASE INPUT HERE </h1>
+    <from action="/index/" method="post">
+        <input type="text" name="username"/>
+        <input type="password" name="password"/>
+        <input type="submit" value="commit"/>
+    </from>
+
+    <hr />
+    <h1 style="..."> USER LIST </h1>
+    <table border="1">
+        <thead>
+            <th> Username </th>
+            <th> Password </th>
+        </thead>
+        <tbody>
+            {%  for line in data %}
+                <tr>
+                    <td>{{ line.user }}</td>
+                    <td>{{ line.pwd }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
