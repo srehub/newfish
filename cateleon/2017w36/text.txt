@@ -1,0 +1,7 @@
+2016-10-21 21:07:59,787 [7 MainWindowForm]INFO: update time 136.6314
+2016-10-21 21:07:59,908 [7 KinectServer]INFO: lClientSockets[0] elapsed time 16.
+2016-10-21 21:07:59,918 [7 KinectServer]INFO: lClientSockets[1] elapsed time 107.
+2016-10-21 21:07:59,929 [7 MainWindowForm]INFO: update time 135.1311
+2016-10-21 21:08:00,039 [7 KinectServer]INFO: lClientSockets[0] elapsed time 14.
+2016-10-21 21:08:00,045 [7 KinectServer]INFO: lClientSockets[1] elapsed time 103.
+2016-10-21 21:08:00,053 [7 MainWindowForm]INFO: update time 118.1132
