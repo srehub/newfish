@@ -1,0 +1,52 @@
+
+#__Author__: zhijian
+#Time: 2017/9/28 17:16
+
+
+import time
+
+def show_time(f):
+    def inner()
+    start = time.time()
+    f()                       #f()调用show_time(f),一个闭包函数，相当于def foo()在此层执行
+    end = time.time()
+    print('speed %s' % (end - start))
+    return inner
+    
+@show_time                   #return inner返回给show_time，而@show_time将def foo以函数变量的方式传送给show_time(f)
+def foo():
+    print('hello foo')
+    time.sleep(2)
+foo()
+
+##hell foo
+##speed 2.012296676635742
+--------------------------------------------------------------------------------------------------------------------------
+
+import time
+#装饰器
+def show_time(f):
+    def inner(*args):
+    start = time.time()
+    f(*args)
+    end = time.time()
+    print('speed %s' %(end - start))
+    return inner
+
+#功能函数参数修改
+ def add(*args)
+     sum = 0
+     for i in args:
+         sum += i
+     print(sum)
+     
+ add(1,3,5,7,9,11)
+ 
+ print()
+
+@show_time
+def foo():
+    print('hello foo')
+    time.sleep(3)
+    
+foo()
