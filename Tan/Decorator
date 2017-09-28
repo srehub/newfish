@@ -34,6 +34,7 @@ def show_time(f):
     return inner
 
 #功能函数参数修改
+@show_time     #等于add = show_time(add)
  def add(*args)
      sum = 0
      for i in args:
@@ -44,9 +45,47 @@ def show_time(f):
  
  print()
 
-@show_time
+@show_time     
 def foo():
     print('hello foo')
     time.sleep(3)
     
+foo()
+
+_________________________________________________________________________________________________
+#带参数的装饰器
+def logger(flag=0):  # 作用为得到一个参数
+
+    def show_time(func):
+
+        def wrapper(*args,**kwargs):
+            start = time.time()
+            func(*args,**kwargs)
+            end = time.time()
+            print('speed %s' % (end - start))
+
+            if flag:
+                print('print logging')
+
+        return wrapper
+
+    return show_time
+
+
+@logger('a')             # a作为一个参数返回给flag=a，当if判断flag有参数时，执行打印日志，# logger同时得到闭包函数show_time
+
+def add(*args,**kwargs):
+    sum = 0
+    for i in args:
+        sum += i
+    print(sum)
+    time.sleep(2)
+
+add(1,3,5)
+print()
+
+@logger()                       #flag未得到参数，if判断为false
+def foo():
+    print('hello foo')
+
 foo()
